@@ -1,10 +1,13 @@
 require 'sinatra/base'
 
+
+
 class Battle < Sinatra::Base
   # get '/' do
   #   'Hello Battle!'
-  # end
+  # end  
   enable :sessions
+  set :session_secret, "super secret"
 
   get '/' do
     erb(:index)
