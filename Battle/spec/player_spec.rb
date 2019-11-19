@@ -2,6 +2,7 @@ require 'player'
 
 describe Player do
   subject(:bella) {Player.new("Bella")}
+  subject(:marjan) {Player.new("Marjan")}
 
   describe '#name' do
     it 'returns the name attribute' do
@@ -15,9 +16,16 @@ describe Player do
     end
   end
 
+  describe '#attack' do
+    it 'should damage the player' do
+      expect(marjan).to receive(:receive_hit)
+      bella.attack(marjan) 
+    end
+  end
+
   describe '#receive_hit' do
     it 'should recieve a hit and lower hp' do
-      expect{bella.receive_hit}.to change{bella.hp}.by(-10)
+      expect{marjan.receive_hit}.to change{marjan.hp}.by(-10)
     end
   end
 
