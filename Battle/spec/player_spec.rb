@@ -19,13 +19,13 @@ describe Player do
   describe '#attack' do
     it 'should damage the player' do
       expect(marjan).to receive(:receive_hit)
-      bella.attack(marjan) 
+      bella.attack(marjan)
     end
   end
 
   describe '#receive_hit' do
     it 'should recieve a hit and lower hp' do
-      expect{marjan.receive_hit}.to change{marjan.hp}.by(-10)
+      expect{marjan.receive_hit}.to change{marjan.hp}.by(-described_class::DEFAULT_HIT)
     end
   end
 
