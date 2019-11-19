@@ -7,4 +7,8 @@ class Player
     @name = name
     @hp = DEFAULT_HP
   end
+
+  def receive_hit
+    @hp -= 10
+  end 
 end
