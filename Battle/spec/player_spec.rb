@@ -15,4 +15,11 @@ describe Player do
     end
   end
 
+  describe '#receive_hit' do
+    it 'should recieve a hit and lower hp' do
+      expect{bella.receive_hit}.to change{bella.hp}.by(-10)
+    end
+  end
+
+
 end
