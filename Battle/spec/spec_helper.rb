@@ -12,7 +12,8 @@
 # the additional setup, and require it from the spec files that actually need
 # it.
 #
-# See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
+# S
+
 
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
@@ -106,5 +107,7 @@ require File.join(File.dirname(__FILE__), '..', 'app.rb')
 require 'capybara'
 require 'capybara/rspec'
 require 'rspec'
+require 'features/web_helpers'# new addition in test helpers section
+
 Capybara.app = Battle
 end

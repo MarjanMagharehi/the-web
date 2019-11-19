@@ -5,7 +5,7 @@ require 'sinatra/base'
 class Battle < Sinatra::Base
   # get '/' do
   #   'Hello Battle!'
-  # end  
+  # end
   enable :sessions
   set :session_secret, "super secret"
 
@@ -24,6 +24,12 @@ class Battle < Sinatra::Base
     @player_2_name = session[:player_2_name]
     erb(:play)
   end
+
+get '/attack' do
+  @player_1_name = session[:player_1_name]
+  @player_2_name = session[:player_2_name]
+  erb(:attack)
+end
 
   run! if app_file == $0
 end
