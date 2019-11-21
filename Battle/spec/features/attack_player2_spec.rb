@@ -9,5 +9,9 @@ feature 'Attack' do
     click_button 'Attack'
     expect(page).to have_content 'Marjan: 90HP'
   end
-
+  scenario 'Player 2 attacks Player 1 and gets confirmation' do
+    sign_in_and_play
+    click_button 'Attack'
+    expect(page).to have_content 'Marjan attacked Bella'
+  end
 end
