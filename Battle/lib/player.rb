@@ -10,9 +10,9 @@ class Player
     @hit = DEFAULT_HIT
   end
 
-  def attack(player)
-    player.receive_hit
-  end
+  # def attack(player)
+  #   player.receive_hit
+  # end
 
   def receive_hit
     @hp -= @hit

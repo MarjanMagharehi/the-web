@@ -16,12 +16,12 @@ describe Player do
     end
   end
 
-  describe '#attack' do
-    it 'should damage the player' do
-      expect(marjan).to receive(:receive_hit)
-      bella.attack(marjan)
-    end
-  end
+  # describe '#attack' do
+  #   it 'should damage the player' do
+  #     expect(marjan).to receive(:receive_hit)
+  #     bella.attack(marjan)
+  #   end
+  # end
 
   describe '#receive_hit' do
     it 'should recieve a hit and lower hp' do
